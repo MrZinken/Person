@@ -12,9 +12,17 @@ public abstract class Person {
     public String getNachname(){
         return this.nachname;
     }
+
+
     @Override
     public String toString(){
         String fullName = getVorname()+getNachname();
         return fullName;
+    }
+
+
+    public boolean equals(Person p){
+
+        return this.nachname.equals(p.nachname)&&this.vorname.equals(p.vorname);
     }
 }
